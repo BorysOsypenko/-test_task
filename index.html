@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <title>test site</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">    
+  </head>
+  <body>
+  <div class="container">
+    <ul class="nav nav-pills" role="tablist">
+      <li><a href="#packageTours" role="tab" data-toggle="pill">Пакетные туры</a></li>
+      <li class="active"><a href="#excursionTours" role="tab" data-toggle="pill">Экскурсионные туры</a></li>
+      <li ><a href="#tickets" role="tab" data-toggle="pill">Билеты</a></li>
+      <li><a href="#hotels" role="tab" data-toggle="pill">Отели</a></li>
+      <li class="dropdown pull-right"><a href="#enter" role="tab" data-toggle="pill"><i class="glyphicon glyphicon-user"></i>Вход</a></li>
+      <li class="dropdown pull-right"><a href="#selectedTours" role="tab" data-toggle="pill"><i class="glyphicon glyphicon-heart"></i>Избранные туры</a></li>
+    </ul>
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade" id="packageTours">Вкладка "Пакетные туры"</div>
+      <div role="tabpanel" class="tab-pane active fade in" id="excursionTours">        
+        <form role="form">   
+            <div class="form-group col-md-8">
+              <label for="country">Куда</label>
+              <select type="country"class="form-control">
+                    <option value="" selected disabled>Страна</option>
+                    <option value="">Египет</option>
+                    <option value="">Турция</option>
+                    <option value="">Болгария</option>
+              </select>
+            </div>
+            <div class="form-group col-md-4">
+              <label class="control-label" for="sity">Откуда</label>
+              <select type="sity"class="form-control">
+                    <option value="" selected disabled>Город</option>
+                    <option value="">Киев</option>
+                    <option value="">Одесса</option>
+                    <option value="">Львов</option>
+                  </select>
+            </div>                  
+        </form>
+        <div class="container">        
+          <div class="col-md-6">
+              <label class="control-label" for="date">Дата начала тура</label>
+                <form role="form" class="form-inline" >
+                  <div class="form-group">
+                      <div class="input-group" id="datetimepicker1">
+                          <input type="text" class="form-control"/>
+                          <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </span>
+                      </div>
+                    </div>            
+                  <div class="form-group">
+                    <div class="input-group" id="datetimepicker1">
+                        <input type="text" class="form-control"/>
+                          <span class="input-group-addon">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </span>
+                    </div>
+                </div>
+                </form>              
+              </div>
+              <div class="container">
+                <div class="form-group col-md-3">
+                    <label class="control-label" for="sity">Проезд</label>
+                    <select type="sity"class="form-control">
+                          <option value="" selected disabled></option>
+                          <option value="">Включен</option>
+                          <option value="">Не включен</option>                    
+                        </select>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-lg center-block col-md-3">Найти</button>
+                  <p class="help-block text-center center-block">Больше параметров поиска<i class="glyphicon glyphicon-chevron-down"></i></p>
+                </div>          
+              </div> 
+        </div>
+      </div>       
+      <div role="tabpanel" class="tab-pane fade" id="tickets">Вкладка "Билеты"</div>
+      <div role="tabpanel" class="tab-pane fade" id="hotels">Вкладка "Отели"</div>
+      <div role="tabpanel" class="tab-pane fade" id="selectedTours">Вкладка "Избранные туры"</div>
+      <div role="tabpanel" class="tab-pane fade" id="enter">Вкладка "Вход"</div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script>
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+    </script>
+  </body>
+</html>
